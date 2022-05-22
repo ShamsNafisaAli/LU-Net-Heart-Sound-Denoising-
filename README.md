@@ -35,7 +35,8 @@ Run extract_segments_noFIR.m it first then run data_fold_noFIR.m to create data 
 - Update the definition of pathheartVal ,pathlungval and pathhospitalval under the Codes/config.py file
 - Put the directory of training weight(you can find pretrained weight inside Models folder) inside Codes/result_making.py file 
 - Run Codes/result_making.py to start the inference
-- 
+
+
 #### PASCAL Heart Sound Challenge Dataset
 - First Run Codes/SNR Estimation Algorithm/SNR_Estimation.m to get the estimated SNRs for the denoised signals provide inside Data/data_download_link.txt file
 - Update the definition of pathheartVal, pathlungval and pathhospitalval under the Codes/config.py file
