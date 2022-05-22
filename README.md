@@ -25,14 +25,14 @@ Run extract_segments_noFIR.m it first then run data_fold_noFIR.m to create data 
 
 ### Training:
 - First download the PHS Data (Processed) and ICBHI Dataset (Processed) folder from GoogleDrive Link provide inside Data/data_download_link.txt file
-- Update the definition of path_Heart_Train and path_Lung_Train and specify the model name (for example:use 'lunet' for proposed denoising framework) under the Codes/config.py file
+- Update the definition of path_Heart_Train and path_Lung_Train and specify the model name (for example: use 'lunet' for proposed denoising framework) under the Codes/config.py file
 - Run Codes/train_model.py to start the training
 
 
 ### Re-Generate Results:
 #### Open-access Heart Sound Dataset
-- First download the OAHS Dataset,Hospital Ambient Noise (HAN) Dataset, and ICBHI Dataset (Processed) folders from GoogleDrive Link provide inside Data/data_download_link.txt file 
-- Update the definition of pathheartVal ,pathlungval and pathhospitalval under the Codes/config.py file
+- First download the OAHS Dataset, Hospital Ambient Noise (HAN) Dataset, and ICBHI Dataset (Processed) folders from GoogleDrive Link provide inside Data/data_download_link.txt file 
+- Update the definition of pathheartVal, pathlungval and pathhospitalval under the Codes/config.py file
 - Put the directory of training weight(you can find pretrained weight inside Models folder) inside Codes/result_making.py file 
 - Run Codes/result_making.py to start the inference
 
