@@ -10,5 +10,5 @@ name_model = "lunet"
 input_shape = 800
 output_shape = 800
 sampling_rate_new = 1000
-check = rf"./check_points/{name_model}_model_pc07_PhysioNet_{sampling_rate_new}_-3dB_to_6dB.h5"
+check = rf"./check_points/{name_model}.h5"
 #check=rf"./check_points/{name_model}_model_pc07_PhysioNet_{sampling_rate_new}_-3dB_to_6dB.h5"
