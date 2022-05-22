@@ -34,11 +34,10 @@ Run extract_segments_noFIR.m it first then run data_fold_noFIR.m to create data 
 - Run Codes/result_making.py to start the inference
 - 
 #### PASCAL Heart Sound Challenge Dataset
-- First download the PaHS folder from GoogleDrive Link provide inside Data/data_download_link.txt file
+- First Run Codes/SNR Estimation Algorithm/SNR_Estimation.m to get the estimated SNRs for the denoised signals provide inside Data/data_download_link.txt file
 - Update the definition of pathheartVal, pathlungval and pathhospitalval under the Codes/config.py file
 - Put the directory of training weight (you can find pretrained weight inside Models folder) inside Codes/result_making.py file 
 - Run Codes/result_making.py to start the inference
-- Download the generated .csv file containing the denoised audio samples (0.8s frames merged)
-- Run Codes/SNR Estimation Algorithm/SNR_Estimation_Denoised.m to get the estimated SNRs for the denoised signals
-- Run Codes/SNR Estimation Algorithm/SNR_Estimation_Noisy.m to get the estimated SNRs for the denoised signals
+- Use the directory of the generated .csv file (containing the denoised audio samples) inside the readtable function of Run Codes/SNR Estimation Algorithm/SNR_Estimation_Denoised.m to get the estimated SNRs for the denoised signals
+- Run Codes/SNR Estimation Algorithm/SNR_Estimation_Noisy.m to get the estimated SNRs for the noisy signals
 
