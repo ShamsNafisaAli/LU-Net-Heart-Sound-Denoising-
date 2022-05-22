@@ -3,7 +3,7 @@ import os
 import soundfile as sf
 from scipy import signal
 import librosa
-from utils import mix_fixed_SNR
+from Codes.utils import mix_fixed_SNR
 
 def get_files_and_resample(sampling_rate_new, desired_length_seconds,locH,locN ,db_SNR = 0, mode=0):
 
