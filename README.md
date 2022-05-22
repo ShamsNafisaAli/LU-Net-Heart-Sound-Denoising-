@@ -12,6 +12,7 @@
 - librosa
 - soundfile
 - numpy
+- pandas
 - matplotlib
 
 
