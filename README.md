@@ -22,18 +22,19 @@ Place Physionet dataset (not included in the provided data folder) in the corres
 Run extract_segments_noFIR.m it first then run data_fold_noFIR.m to create data fold in mat format which will be loaded by the model for training and testing. fold0_noFIR.mat is given inside data/feature/folds for convenience, so that you don't have to download the whole physionet dataset and extract data for training and testing. -->
 
 ### Training:
-- First download the PHS Data (Processed) and ICBHI Dataset (Processed) folder from this GoogleDrive Link
+- First download the PHS Data (Processed) and ICBHI Dataset (Processed) folder from GoogleDrive Link provide inside Data/data_download_link.txt file
 - Update the definition of path_Heart_Train and path_Lung_Train and specify the model name (for example:use 'lunet' for proposed denoising framework) under the Codes/config.py file
 - Run Codes/train_model.py to start the training
 
-
-For Training run the trainer.py and provide a dataset name (or fold name) i.e. fold0_noFIR. The command should be like this :
-
-python trainer.py fold0_noFIR
-Other parameters like epochs, verbose, batch_size, pre-trained model path can be passed as arguments.
-
-python trainer.py fold0_noFIR --epochs 300 --batch_size 1000 
-
 ### Re-Generate Results:
-Run the heartnet testbench.ipynb on Jupyter Notebook from the beginning until the block named Model.Predict . Select a log_name by uncommenting one from the LOG name block. The trained models for "heartnet type2 tconv" and "potes algorithm" is given in the log and model directory. These models are trained on fold0_noFIR which is included in the data folder.
-To do the McNemer test read the instruction given in the LOG name block of the notebook. To plot roc curve run the ROC curve block.
+## Open-access Heart Sound Dataset
+- First download the OAHS Dataset,Hospital Ambient Noise (HAN) Dataset, and ICBHI Dataset (Processed) folders from GoogleDrive Link provide inside Data/data_download_link.txt file 
+- Update the definition of pathheartVal ,pathlungval and pathhospitalval under the Codes/config.py file
+- Put the directory of training weight(you can find pretrained weight inside Models folder) inside Codes/result_making.py file 
+- Run Codes/result_making.py to start the inference
+## PASCAL Heart Sound Challenge Dataset
+- First download the PaHS folder from GoogleDrive Link provide inside Data/data_download_link.txt file
+- Update the definition of pathheartVal ,pathlungval and pathhospitalval under the Codes/config.py file
+- Put the directory of training weight(you can find pretrained weight inside Models folder) inside Codes/result_making.py file 
+- Run Codes/result_making.py to start the inference
+
