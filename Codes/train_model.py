@@ -1,9 +1,9 @@
 import tensorflow
 from tensorflow import keras 
 from tensorflow.keras.callbacks import ModelCheckpoint
-from model import enhancement_model
-from processing_initial import get_files_and_resample
-from config import *
+from Codes.model import enhancement_model
+from Codes.processing_initial import get_files_and_resample
+from Codes.config import *
 import os
 
 
