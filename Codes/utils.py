@@ -44,3 +44,19 @@ def check_SNR_non_merged(Xtest,Ytest,SNR,model):
     print(np.mean(rmse_array))
     
     return est[1]
+
+
+def mergeX(X_train,seg):
+    index=0
+    merge=[]
+    for L in range(int(X_train.shape[0]/seg)):
+        temp=X_train[index]
+        for i in range(index,index+seg-1):
+            temp=np.concatenate([temp,X_train[i+1]])
+        temp = temp/max(abs(temp))   
+        merge.append(temp)
+        
+        index+=seg
+    x = np.array(merge)
+    
+    return x
