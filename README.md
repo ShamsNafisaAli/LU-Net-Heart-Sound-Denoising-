@@ -1,12 +1,18 @@
 #  Robust Deep Learning Framework for Real-Time Denoising of Heart Sound
 
 ## Requirements
-- Python 3.6.3
-- Matlab 2017b
-- Keras 2.2.4
-- Tensorflow 1.12.0
-- Sklearn 0.19.1
+- Python 
+- Matlab 
+- Keras 
+- Tensorflow 
+- Sklearn 
 - Tensorboard
+- naturalsort
+- keras-flops
+- librosa
+- soundfile
+- numpy
+- matplotlib
 
 ## How To Run
 ### Data Preparation:
