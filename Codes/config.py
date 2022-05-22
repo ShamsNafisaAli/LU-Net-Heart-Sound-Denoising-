@@ -3,6 +3,7 @@ path_Lung_Train="/content/drive/MyDrive/Heart Sound Denoising All Data/ICBHI Dat
 pathheartVal='/content/drive/MyDrive/Heart Sound Denoising All Data/OAHS Dataset/Git_val'
 pathlungval='/content/drive/MyDrive/Heart Sound Denoising All Data/ICBHI Dataset (Processed)/val'
 pathhospitalval='/content/drive/MyDrive/Heart Sound Denoising All Data/Hospital Ambient Noise (HAN) Dataset'
+pathPascal='../input/clear-heart-data/Processed_6/Processed_6/raw_2400_val'
 
 window_size=.8
 name_model="lunet"
