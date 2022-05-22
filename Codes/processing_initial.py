@@ -71,3 +71,57 @@ def get_files_and_resample(sampling_rate_new, desired_length_seconds,locH,locN ,
     y = np.array(y_list)
     labelk=np.array(label)  
     return x[...,np.newaxis],y[...,np.newaxis],labelk
+
+
+def get_files_and_resamplePascal(sampling_rate_new, desired_length_seconds,locH):
+    
+    print("xxxxxxxxxxxxxxxxxxxxxxxxxxx------start-------xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx")
+
+    startpath = os.path.abspath(locH)
+ 
+    list_with_file_names1 = os.listdir(startpath) 
+    print(list_with_file_names1)
+    duration_samples = int(desired_length_seconds * sampling_rate_new)
+    y_list = []
+    x_list =[]
+    label=[]
+    index = 0
+    lab=-1
+    noise_i=0
+    
+    for file1 in list_with_file_names1: 
+
+        completePath1 = os.path.join(startpath,file1) 
+        list_with_file_names2 = sorted(os.listdir(completePath1))
+
+        snr_index=0
+        index = 0
+        lab += 1
+        kk=0
+        for snrx in snr:
+            noise_i=0
+            for file2 in list_with_file_names2: 
+                kk+=1
+                completePath2 = os.path.join(completePath1,file2)
+                input_file, sampling_rate_orig = sf.read(completePath2)
+                input_file = signal.resample(input_file,  int(sampling_rate_new*2.4))
+                input_file=input_file[0:2400]
+                k=int(len(input_file)/duration_samples)
+                if len(input_file) == 2400:
+                    ytem=[]
+                    ltem=[]
+                    skip=0
+                    for i in range(k):
+                        x_files=input_file[i*duration_samples:duration_samples*(i+1)]
+                        real_signal=(x_files/max(abs(x_files)))
+                        ytem.append(real_signal)
+                        ltem.append(lab)
+                    if skip==0:
+                        y_list=y_list+ytem
+                        label=label+ltem
+    print('XXXXXXXXXXXXXXXXXXXX-------end---------XXXXXXXXXXXXXXXXXXXXXXXX')
+    y = np.array(y_list)#convert the list to an array on integers
+    labelk=np.array(label)
+    
+    return y[...,np.newaxis],labelk
+
