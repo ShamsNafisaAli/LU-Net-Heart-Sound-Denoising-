@@ -3,7 +3,7 @@
 ## Submitted at *IEEE JBHI*
 
 ### Objective: 
-Cardiac auscultation is the most practiced non-invasive and cost-effective procedure for the early diagnosis of heart diseases. While machine learning based systems can aid in automatically screening patients, the robustness of these systems is affected by the phonocardiogram (PCG) acquisition device, i.e., the stethoscope. This paper studies the adverse effect of stethoscope/sensor variability on PCG signal classification and develops strategies to address this problem.
+Cardiovascular diseases (CVDs) are one of the leading causes of mortality and morbidity in today’s world. Being non-invasive and cost-effective, cardiac auscultation is the most popular method for the early diagnosis of heart diseases,. While machine learning based systems can aid in automatically screening patients, the robustness of these systems is affected by the phonocardiogram (PCG) acquisition device, i.e., the stethoscope. This paper studies the adverse effect of stethoscope/sensor variability on PCG signal classification and develops strategies to address this problem.
 
 ### Methods: 
 We propose a novel Convolutional Neural Network (CNN) layer, consisting of time-convolutional (tConv) units, that emulate Finite Impulse Response (FIR) filters. These filter coefficients can be updated via backpropagation and be stacked in the front-end of the network as a learnable filterbank. The filters can incorporate properties such as linear/zero phase-response and symmetry while ensuring robustness towards stethoscope variations by attenuating sensor dependent patterns.
