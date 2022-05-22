@@ -6,6 +6,6 @@ from utils import *
 
 #Use the pretrained weights from Models folder or use your own check point's directory if you train by yourself
 model = keras.models.load_model('Models/LU-Net.h5') 
-for snr in [-6,-3,0,3,6]:
-    XtestL,YtestL,label1= get_files_and_resampleP(1000,0.8,locH=pathheartVal,locN=pathhospitalval, db_SNR =snr,mode=1)
+for snr in [-6,-3, 0,3,6]:
+    XtestL,YtestL,label1= get_files_and_resampleP(1000, 0.8, locH = pathheartVal,locN = pathhospitalval, db_SNR = snr, mode = 1)
     est_testL=check_SNR_non_merged(XtestL,YtestL,snr,model)
