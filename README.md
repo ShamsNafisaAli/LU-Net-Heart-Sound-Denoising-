@@ -15,6 +15,7 @@
 - pandas
 - matplotlib
 
+***
 
 ## How To Run
 <!-- ### Data Preparation:
@@ -23,12 +24,14 @@
 Place Physionet dataset (not included in the provided data folder) in the corresponding folders inside the data/physionet/training folder. The csv files containing the labels should be put inside the corresponding folders inside the labels folder and all of them should have the same name, currently 'REFERENCE_withSQI.csv'. If you change the name you'll have to rename the variable labelpath in extract_segments.m and extract_segments_noFIR.m
 Run extract_segments_noFIR.m it first then run data_fold_noFIR.m to create data fold in mat format which will be loaded by the model for training and testing. fold0_noFIR.mat is given inside data/feature/folds for convenience, so that you don't have to download the whole physionet dataset and extract data for training and testing. -->
 
+***
 
 ### Training:
 - First download the PHS Data (Processed) and ICBHI Dataset (Processed) folder from GoogleDrive Link provide inside Data/data_download_link.txt file
 - Update the definition of path_Heart_Train and path_Lung_Train and specify the model name (for example: use 'lunet' for proposed denoising framework) under the Codes/config.py file
 - Run Codes/train_model.py to start the training
 
+***
 
 ### Re-Generate Results:
 #### Open-access Heart Sound Dataset
@@ -46,3 +49,19 @@ Run extract_segments_noFIR.m it first then run data_fold_noFIR.m to create data 
 - Use the directory of the generated .csv file (containing the denoised audio samples) inside the readtable function of Run Codes/SNR Estimation Algorithm/SNR_Estimation_Denoised.m to get the estimated SNRs for the denoised signals
 - Run Codes/SNR Estimation Algorithm/SNR_Estimation_Noisy.m to get the estimated SNRs for the noisy signals
 
+***
+
+## Citation
+
+If this repository helped your research, please cite:<br />
+
+Ali, S. N., Shuvo, S. B., & Hasan, T. (2022). A Robust Deep Learning Framework for Real-Time Denoising of Heart Sound. TechRxiv preprint.
+
+<blockquote>
+  
+@article{ali2022robust,<br />
+  title={A Robust Deep Learning Framework for Real-Time Denoising of Heart Sound},<br />
+  author={Ali, Shams Nafisa and Shuvo, Samiul Based and Hasan, Taufiq},<br />
+  year={2022},<br />
+  publisher={TechRxiv}<br />
+}
