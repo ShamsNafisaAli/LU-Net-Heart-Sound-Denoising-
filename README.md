@@ -55,7 +55,7 @@ Run extract_segments_noFIR.m it first then run data_fold_noFIR.m to create data 
 
 If this repository helped your research, please cite:<br />
 
-Ali, S. N., Shuvo, S. B., & Hasan, T. (2022). A Robust Deep Learning Framework for Real-Time Denoising of Heart Sound. TechRxiv preprint.
+Ali, S. N., Shuvo, S. B., Al-Manzo, M. I. S., Hasan, A., & Hasan, T. (2023). An end-to-end deep learning framework for real-time denoising of heart sounds for cardiac disease detection in unseen noise. IEEE Access.
 
 <blockquote>
   
