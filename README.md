@@ -59,9 +59,10 @@ Ali, S. N., Shuvo, S. B., & Hasan, T. (2022). A Robust Deep Learning Framework f
 
 <blockquote>
   
-@article{ali2022robust,<br />
-  title={A Robust Deep Learning Framework for Real-Time Denoising of Heart Sound},<br />
-  author={Ali, Shams Nafisa and Shuvo, Samiul Based and Hasan, Taufiq},<br />
-  year={2022},<br />
-  publisher={TechRxiv}<br />
+@article{ali2023end, <br />
+  title={An end-to-end deep learning framework for real-time denoising of heart sounds for cardiac disease detection in unseen noise},<br />
+  author={Ali, Shams Nafisa and Shuvo, Samiul Based and Al-Manzo, Md Ishtiaque Sayeed and Hasan, Anwarul and Hasan, Taufiq},<br />
+  journal={IEEE Access},<br />
+  year={2023},<br />
+  publisher={IEEE}<br />
 }
